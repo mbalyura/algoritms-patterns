@@ -1,14 +1,17 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-return-assign */
+
 const memoMap = (fn) => {
   const cashe = new Map();
   return (number) => {
     if (cashe.has(number)) {
       return cashe.get(number);
     }
-    result = fn(number);
+    const result = fn(number);
     cashe.set(number, result);
     return result;
-  }
-}
+  };
+};
 
 const memoObj = (fn) => {
   const cashe = {};
@@ -17,14 +20,14 @@ const memoObj = (fn) => {
       return cashe[number];
     }
     return cashe[number] = fn(number);
-  }
-}
+  };
+};
 
 const factorial = (number) => {
   console.log(`calculation for number ${number}`);
   if (number <= 1) return 1;
-  return number * factorial (number - 1);
-}
+  return number * factorial(number - 1);
+};
 
 const memoizedFactorial = memoObj(factorial);
 

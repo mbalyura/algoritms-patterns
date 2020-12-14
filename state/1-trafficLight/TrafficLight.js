@@ -1,4 +1,4 @@
-import RedState from './RedState.js';
+import RedState from './RedState';
 
 export default class TrafficLight {
   constructor() {
@@ -14,13 +14,9 @@ export default class TrafficLight {
   }
 
   tick() {
-    this.state.countTick = this.state.countTick - 1;
+    this.state.countTick -= 1;
     if (this.state.countTick === 0) {
       this.state.nextState();
     }
   }
 }
-
-// const traffic = new TrafficLight()
-
-// console.log(traffic.getCurrentMode())

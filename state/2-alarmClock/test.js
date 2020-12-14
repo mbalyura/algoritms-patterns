@@ -1,4 +1,4 @@
-import AlarmClock from './AlarmClock.js';
+import AlarmClock from './AlarmClock';
 
 describe('AlarmClock', () => {
   it('should have default values', () => {

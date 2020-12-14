@@ -1,5 +1,6 @@
-import State from './State.js';
-import GreenState from './GreenState.js';
+/* eslint-disable import/no-cycle */
+import State from './State';
+import GreenState from './GreenState';
 
 export default class YellowState extends State {
   constructor(light) {

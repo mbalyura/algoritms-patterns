@@ -1,3 +1,4 @@
+/* eslint-disable class-methods-use-this */
 import State from './State';
 
 export default class BellState extends State {

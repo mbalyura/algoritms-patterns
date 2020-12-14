@@ -1,4 +1,4 @@
-import TrafficLight from './TrafficLight.js';
+import TrafficLight from './TrafficLight';
 
 describe('TrafficLight', () => {
   it('should have default values', () => {
