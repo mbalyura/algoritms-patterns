@@ -1,4 +1,4 @@
-import { getRandArray } from '../search/helpers';
+import { getRandArray } from '../helpers/helpers';
 import selectionSort from './selectionSort';
 import quickSort from './quickSort';
 

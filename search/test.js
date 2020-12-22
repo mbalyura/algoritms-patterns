@@ -1,4 +1,4 @@
-import { getRandArray, getRandInt } from './helpers';
+import { getRandArray, getRandInt } from '../helpers/helpers';
 import binarySearch from './binarySearch';
 import linearSearch from './linearSearch';
 
