@@ -1,7 +1,6 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable no-return-assign */
 
-const memoMap = (fn) => {
+export const memoMap = (fn) => {
   const cashe = new Map();
   return (number) => {
     if (cashe.has(number)) {
@@ -13,7 +12,7 @@ const memoMap = (fn) => {
   };
 };
 
-const memoObj = (fn) => {
+export const memoObj = (fn) => {
   const cashe = {};
   return (number) => {
     if (number in cashe) {
@@ -22,22 +21,3 @@ const memoObj = (fn) => {
     return cashe[number] = fn(number);
   };
 };
-
-const factorial = (number) => {
-  console.log(`calculation for number ${number}`);
-  if (number <= 1) return 1;
-  return number * factorial(number - 1);
-};
-
-const memoizedFactorial = memoObj(factorial);
-
-console.log(memoizedFactorial(5));
-console.log(memoizedFactorial(5));
-
-// call with number 5
-// call with number 4
-// call with number 3
-// call with number 2
-// call with number 1
-// 120
-// 120          *** on second call no calculations are made ***
